@@ -19,11 +19,14 @@ class TestMathGame(unittest.TestCase):
     def test_function_C(self):
             test_cases = [
                 (5, 2, '+', '5 + 2', 7),
-                ''' TODO add more test cases here '''
+                (10, 3, '-', '10 - 3', 7),
+                (6, 2, '*', '6 * 2', 12),
             ]
 
             for num1, num2, operator, expected_problem, expected_answer in test_cases:
-                # TODO
+                result_problem, result_answer = function_C(num1, num2, operator)
+                self.assertEqual(result_problem, expected_problem)
+                self.assertEqual(result_answer, expected_answer)
                 pass
 
 if __name__ == "__main__":
